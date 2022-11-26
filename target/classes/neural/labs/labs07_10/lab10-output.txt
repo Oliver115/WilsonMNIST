@@ -1,0 +1,25 @@
+Author: Mike Volchko & Oliver Wilson
+Date: 
+
+ =================== Number of samples: 2000 ===========================
+
+Training: 
+total layers: 4 neurons: 968
+started: Fri Nov 02 14:50:42 GMT-04:00 2022
+   epoch  error
+       1 0.1700
+     100 0.0128
+     200 0.0165
+     300 0.0162
+     400 0.0152
+     500 0.0114
+     543 0.0099
+--- CONVERGED!
+success rate = 1722/2000 (86.1%)
+finished: Fri Nov 02 14:51:40 GMT-04:00 2022
+
+
+Testing: 
+total layers: 4 neurons: 968
+success rate = 7849/10000 (78.5%)
+finished: Fri Nov 02 14:53:14 GMT-04:00 2022

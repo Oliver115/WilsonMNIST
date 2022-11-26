@@ -1,0 +1,22 @@
+Author: Mike Volchko & Oliver Wilson
+Date: 09/10/2022
+
+1.	If the network converges as Figure 2 shows, study the “Results” section.  Do they make sense? Why do you say so?
+The results show the initial values (X1, X2, and X3) and the expected output (t1) alongside it. 
+When the expected output is 1, the y1 value is very close to 1; and when the expected output is 0 the y1 value is close
+to 0. Based on this, the results make sense because the program is predicting the answer within a 1% error.
+
+
+2.	How many runs did you do in total, including the initial run in the prior step?
+The program was run 10 times.
+
+
+3.	How many times does it converge in those runs?
+Out of the 10 times, the program was run, it converged 6 times.
+
+
+4.	What’s the minimum training error of the last successful run in which the network converged?
+The minimum error was: 0.0098
+
+5.	How many epochs did it take in the last successful run in which the network converged?
+It took 83 epochs.
