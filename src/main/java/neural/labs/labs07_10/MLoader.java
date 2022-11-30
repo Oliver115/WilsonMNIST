@@ -182,7 +182,7 @@ public class MLoader implements IMLoader {
     public Normal normalize() {
 
         double[][] normalizedPixels = new double[loadedData.length][784];
-        double[][] normalizedLabels = new double[loadedData.length][9];
+        double[][] normalizedLabels = new double[loadedData.length][0];
 
         for (int i = 0; i < loadedData.length; i++) {
 
@@ -198,6 +198,7 @@ public class MLoader implements IMLoader {
             /**for (int j = 0; j < tempLabels.length; j++) {
                 normalizedLabels[i][j] = tempLabels[j];
             }*/
+            // NOT
             normalizedLabels[i] = eq.encode(loadedData[i].label());
         }
         Normal normalizedData = new Normal(normalizedPixels, normalizedLabels);
