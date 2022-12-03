@@ -7,7 +7,7 @@ package neural.mnist;
  * @param label Corresponding label
  * @author Mike Volchko & Oliver Wilson
  */
-public record MDigit(int no, double[] pixels, int label) {
+public record MDigit(int no, double[] pixels, double label) {
     public String toString()
     {
         String output = "";

@@ -4,7 +4,7 @@ package neural.mnist;
  * Interface to load the MedMNIST data.
  */
 public interface IMedLoader {
-    public record Normal(double[][] pixels, int[][] labels) {
+    public record Normal(double[][] pixels, double[][] labels) {
     }
 
     /**
