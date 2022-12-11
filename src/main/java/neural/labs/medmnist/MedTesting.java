@@ -32,7 +32,7 @@ public class MedTesting {
     /**
      * ================= SPECIFY DATASET HERE! =================
      */
-    static String DATASET = "chest";
+    static String DATASET = "pneumonia";
 
     static void init() {
         MedLoader medloader = new MedLoader();

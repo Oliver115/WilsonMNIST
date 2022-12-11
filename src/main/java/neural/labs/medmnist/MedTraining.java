@@ -39,7 +39,7 @@ public class MedTraining {
     /**
      * ================= SPECIFY DATASET HERE! =================
      */
-    static String DATASET = "chest";
+    static String DATASET = "pneumonia";
     public static int num_samples = 100; // default?
 
 
@@ -55,7 +55,7 @@ public class MedTraining {
         }
         else if (DATASET == "chest") {
             medloader.load("chest", "train"); // Dataset size: 78,468
-            num_samples = 10;
+            num_samples = 750;
         }
         else if (DATASET == "breast") {
             medloader.load("breast", "train"); // Dataset size: 546
