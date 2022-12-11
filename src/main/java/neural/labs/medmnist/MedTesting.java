@@ -22,7 +22,6 @@ import java.time.format.DateTimeFormatter;
 public class MedTesting {
 
     //public final static int NUM_SAMPLES = 10000;
-    static String DIR = "src/main/java/neural/labs/labs07_10";
 
     static double TRAINING_INPUTS[][];
     static double TRAINING_IDEALS[][];
