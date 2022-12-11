@@ -1,38 +1,23 @@
 package neural.labs.medmnist;
 
 import org.encog.Encog;
-import org.encog.engine.network.activation.ActivationSigmoid;
-import org.encog.ml.data.MLDataSet;
 import org.encog.ml.data.basic.BasicMLDataSet;
-import org.encog.ml.train.BasicTraining;
 import org.encog.neural.networks.BasicNetwork;
-import org.encog.neural.networks.layers.BasicLayer;
-import org.encog.neural.networks.training.propagation.resilient.ResilientPropagation;
 import org.encog.persist.EncogDirectoryPersistence;
 
 import neural.util.EncogHelper;
 
-import neural.labs.lab03_06.Mop;
-import neural.matrix.IMop;
 import neural.mnist.IMedLoader.Normal;
 
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
-import static neural.util.EncogHelper.*;
 
 /**
  * Original code by: Ron Coleman (24 Oct 2017)
  * @authors: Michael Volchko and Oliver Wilson
- * @date 
+ * @date 30 Nov 2022
  */
 public class MedTesting {
 

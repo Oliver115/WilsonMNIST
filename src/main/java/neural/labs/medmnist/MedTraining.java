@@ -1,8 +1,8 @@
 package neural.labs.medmnist;
 
+import neural.matrix.Mop;
 import org.encog.Encog;
 import org.encog.engine.network.activation.ActivationSigmoid;
-import org.encog.ml.data.MLDataSet;
 import org.encog.ml.data.basic.BasicMLDataSet;
 import org.encog.ml.train.BasicTraining;
 import org.encog.neural.networks.BasicNetwork;
@@ -12,7 +12,6 @@ import org.encog.persist.EncogDirectoryPersistence;
 
 import neural.util.EncogHelper;
 
-import neural.labs.lab03_06.Mop;
 import neural.matrix.IMop;
 import neural.mnist.IMedLoader.Normal;
 
@@ -20,11 +19,6 @@ import java.io.File;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import static neural.util.EncogHelper.*;
 
@@ -45,8 +39,8 @@ public class MedTraining {
     /**
      * ================= SPECIFY DATASET HERE! =================
      */
-    static String DATASET = "chest";
-    public static int num_samples = 500; // default?
+    static String DATASET = "breast";
+    public static int num_samples = 100; // default?
 
 
     static void init() {
@@ -57,15 +51,15 @@ public class MedTraining {
 
         if (DATASET == "pneumonia") {
             medloader.load("pneumonia", "train"); // Dataset size: 4,708
-            num_samples = 4708; 
+            num_samples = 4000;
         }
         else if (DATASET == "chest") {
             medloader.load("chest", "train"); // Dataset size: 78,468
-            num_samples = 5000;
+            num_samples = 100;
         }
         else if (DATASET == "breast") {
             medloader.load("breast", "train"); // Dataset size: 546
-            num_samples = 546;
+            num_samples = 300;
         }
         else {
             System.out.println("Error while loading data.");
@@ -83,6 +77,7 @@ public class MedTraining {
     public static void main(final String args[]) {
 
         init();
+        System.out.println("Num_Samples: " + num_samples);
 
          // Instantiate the network
          BasicNetwork network = new BasicNetwork();
@@ -150,7 +145,7 @@ public class MedTraining {
          } while (error > TOLERANCE && epoch < MAX_EPOCHS);
 
         if (error < minError) {
-            EncogDirectoryPersistence.saveObject(new File(DIR+"/encogmnist-" + DATASET + ".bin"),network);
+            EncogDirectoryPersistence.saveObject(new File(DIR + "/models" + "/encogmnist-" + DATASET + ".bin"),network);
         }
         training.finishTraining();
         EncogHelper.log(epoch, error,sameCount > MAX_SAME_COUNT, true);

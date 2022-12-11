@@ -1,8 +1,0 @@
-Author: Mike Volchko & Oliver Wilson
-Date: 10/17/2022
-
-total layers: 4 neurons: 968
-   epoch  error
-       1 0.1593
-      23 0.0097
---- CONVERGED!

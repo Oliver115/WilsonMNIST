@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @authors: Michael Volchko and Oliver Wilson
- * @date 29 Oct 2022
+ * @date 30 Nov 2022
  */
 
 public class MedExercise{
